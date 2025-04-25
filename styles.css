@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Layout */
+body {
+    display: flex;
+    background: #f4f4f4;
+    transition: 0.5s;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #2C1A15;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    transition: 0.4s;
+}
+
+.admin-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.admin-sidebar ul li {
+    padding: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.admin-sidebar ul li:hover {
+    background: #BD4C41;
+    transform: translateX(5px);
+    border-radius: 5px;
+}
+
+.admin-sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.admin-sidebar ul li a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Header */
+.admin-header {
+    position: fixed;
+    top: 0;
+    left: 260px;
+    width: calc(100% - 260px);
+    background: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+}
+
+.admin-header .logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2C1A15;
+}
+
+.header-right i {
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header-right i:hover {
+    color: #BD4C41;
+    transform: scale(1.2);
+}
+
+.logout-btn {
+    background: #BD4C41;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #A73C36;
+}
+
+/* Main content */
+.admin-content {
+    margin-left: 260px;
+    padding: 70px 50px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.admin-widgets {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+/* Remove underline from links and keep the original styling */
+.admin-widgets a {
+    text-decoration: none;
+    color: inherit; /* Inherit the color of the parent */
+}
+
+.admin-widgets a:hover {
+    /* Optional: You can add a hover effect here if needed */
+    color: inherit; /* Ensure color doesn't change on hover */
+}
+
+.widget {
+    width: 30%;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.widget:hover {
+    background: #BD4C41;
+    color: white;
+    transform: scale(1.05);
+}
+
+.widget i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.admin-footer {
+    position: fixed;
+    bottom: 0;
+    left: 260px;
+    width: calc(100% - 260px);
+    background: #2C1A15;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
